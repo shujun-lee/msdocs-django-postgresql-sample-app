@@ -27,7 +27,8 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 # ALLOWED_HOSTS = ['www.floranona.me', 'floranona.me', 'localhost']
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],os.environ['CUSTOM_HOSTNAME']]
+# ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'],os.environ['CUSTOM_HOSTNAME']]
+ALLOWED_HOSTS = ['*']
 
 if 'CODESPACE_NAME' in os.environ:
     CSRF_TRUSTED_ORIGINS = [f'https://{os.getenv("CODESPACE_NAME")}-8000.{os.getenv("GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN")}']
